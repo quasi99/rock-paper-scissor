@@ -1,3 +1,4 @@
+  // Computer play will random switch for computer.
 function computerPlay() {
 	let random = Math.floor(Math.random()*3);
 	switch(random) {
@@ -12,29 +13,31 @@ function computerPlay() {
 	}
 }
 
+  //return the result and console.log them (not required).
 function playRound(playerSelection, computerSelection) {
   // your code here!
   switch(playerSelection.toLowerCase()){
   	case("rock"):
-  	return (computerSelection.toLowerCase() == "scissors") ? "You win! Rock beats Scissors!"
-  	      :(computerSelection.toLowerCase() == "paper") ? "You lose! Paper beats Rock!"
-  	      : "It's a tie!";
+  	return (computerSelection.toLowerCase() == "scissors") ? "win" + console.log("You win! Rock beats Scissors!")
+  	      :(computerSelection.toLowerCase() == "paper") ? "lose" + console.log("You lose! Paper beats Rock!")
+  	      : "tie" + console.log("It's a tie!");
   	break;
   	case("paper"):
-  	return (computerSelection.toLowerCase() == "rock") ? "You win! Paper beats Rock!"
-  	      :(computerSelection.toLowerCase() == "scissors") ? "You lose! Scissors beats Paper!"
-  	      : "It's a tie!";
+  	return (computerSelection.toLowerCase() == "rock") ? "win" + console.log("You win! Paper beats Rock!")
+  	      :(computerSelection.toLowerCase() == "scissors") ? "lose" + console.log("You lose! Scissors beats Paper!")
+  	      : "tie" + console.log("It's a tie!");
   	break;
   	case("scissors"):
-  	return (computerSelection.toLowerCase() == "paper") ? "You win! Scissors beats Paper!"
-  	      :(computerSelection.toLowerCase() == "rock") ? "You lose! Rock beats Scissors!"
-  	      : "It's a tie!";
+  	return (computerSelection.toLowerCase() == "paper") ? "win" + console.log("You win! Scissors beats Paper!")
+  	      :(computerSelection.toLowerCase() == "rock") ? "lose" + console.log("You lose! Rock beats Scissors!")
+  	      : "tie" + console.log("It's a tie!");
   	break;
   	default:
-  	return "Something went wrong.";
+  	return "Something went wrong." + console.log("Something went wrong.");
   }
 }
 
+  //run 5 rounds and report the score 
 function game() {
 	let i;
 	let userScore = 0;
@@ -56,6 +59,7 @@ function game() {
 		    i--; //replay this round
 	}
 }
+
 
 let ties = 5-userScore-computerScore;
 let grammar = (ties !=1) ? "games" : "game";
